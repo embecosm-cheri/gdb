@@ -239,7 +239,10 @@ struct attribute
   {
     gdb_assert (form == DW_FORM_addr
 		|| ((form == DW_FORM_addrx
-		     || form == DW_FORM_GNU_addr_index)
+		     || form == DW_FORM_GNU_addr_index
+		     || form == DW_FORM_loclistx
+		     || form == DW_FORM_rnglistx
+		     )
 		    && requires_reprocessing));
     u.addr = addr;
     requires_reprocessing = 0;

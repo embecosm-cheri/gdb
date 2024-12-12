@@ -19641,10 +19641,10 @@ read_attribute_reprocess (const struct die_reader_specs *reader,
 					    attr->as_unsigned_reprocess ()));
         break;
       case DW_FORM_loclistx:
-	attr->set_address (read_loclist_index (cu, attr->as_unsigned ()));
+	attr->set_address (read_loclist_index (cu, attr->as_unsigned_reprocess ()));
 	 break;
       case DW_FORM_rnglistx:
-	attr->set_address (read_rnglist_index (cu, attr->as_unsigned (), tag));
+	attr->set_address (read_rnglist_index (cu, attr->as_unsigned_reprocess (), tag));
         break;
       case DW_FORM_strx:
       case DW_FORM_strx1:

@@ -179,6 +179,7 @@ attribute::form_is_unsigned () const
 	  || form == DW_FORM_flag_present
 	  || form == DW_FORM_udata
 	  || form == DW_FORM_rnglistx
+	  || form == DW_FORM_loclistx
 	  || form == DW_FORM_ref1
 	  || form == DW_FORM_ref2
 	  || form == DW_FORM_ref4
@@ -192,11 +193,14 @@ bool
 attribute::form_requires_reprocessing () const
 {
   return (form == DW_FORM_strx1
+	  || form == DW_FORM_strx
 	  || form == DW_FORM_strx2
 	  || form == DW_FORM_strx3
 	  || form == DW_FORM_strx4
 	  || form == DW_FORM_GNU_str_index
 	  || form == DW_FORM_addrx
+	  || form == DW_FORM_rnglistx
+	  || form == DW_FORM_loclistx
 	  || form == DW_FORM_GNU_addr_index);
 }
 
